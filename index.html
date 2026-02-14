@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz - ¿Cuánto nos conocemos?</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Pantalla inicial -->
+        <div id="inicio" class="screen active">
+            <div class="content">
+                <h1>❤️ Página para la mujer mas hermosa de mexico, o sea Mi niña michel ❤️</h1>
+                <p>Espero te guste este quiz amor</p>
+                <button onclick="iniciarQuiz()" class="btn-start">Comenzar</button>
+                <button onclick="mostrarCancion()" class="btn-start" style="margin-top: 15px;">Ver dedicatoria musical</button>
+            </div>
+        </div>
+
+        <!-- Pantalla del quiz -->
+        <div id="quiz" class="screen">
+            <div class="quiz-container">
+                <div class="progress">
+                    <div id="progress-bar" class="progress-bar"></div>
+                </div>
+                <div class="question-counter">Pregunta <span id="current-question">1</span> de <span id="total-questions">5</span></div>
+                
+                <h2 id="question-text">¿Cuál es la pregunta?</h2>
+                
+                <div class="options" id="options-container">
+                    <!-- Las opciones se generarán aquí -->
+                </div>
+            </div>
+        </div>
+
+        <!-- Pantalla de resultados -->
+        <div id="resultados" class="screen">
+            <div class="result-container">
+                <h1 id="result-title">¡Excelente!</h1>
+                <div class="score-display">
+                    <span id="score">0</span>/<span id="max-score">5</span>
+                </div>
+                <p id="result-message">Mensaje feliz</p>
+                <div id="result-emoji" class="emoji-large">❤️</div>
+                <button onclick="volverAlInicio()" class="btn-restart">Volver al inicio</button>
+            </div>
+        </div>
+
+        <!-- Pantalla de dedicatoria musical -->
+        <div id="dedicatoria" class="screen">
+            <div class="dedicatoria-container">
+                <div class="hearts">❤️💕💗</div>
+                <h1>Para ti, mi niña preciosa ❤️</h1>
+                <p class="mensaje-dedicatoria">Te amo mucho mi niña preciosa, y quiero dedicarte esta canción</p>
+                <div class="song-container">
+                    <div class="album-cover">🎵</div>
+                    <div class="song-info">
+                        <h2>ROS - Mac Miller</h2>
+                        <p>Una canción especial para ti</p>
+                    </div>
+                </div>
+                <div class="audio-player">
+                    <iframe width="100%" height="315" src="https://www.youtube.com/embed/acp7wK8o6b0" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </div>
+                <div class="lyrics">
+                    <p>"En cada latido, en cada momento,<br>mi amor por ti es perfecto,<br>como una rosa que nunca se marchita,<br>así es mi amor, mi Chaparrita."</p>
+                </div>
+                <button onclick="cerrarDedicatoria()" class="btn-restart">Volver</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
